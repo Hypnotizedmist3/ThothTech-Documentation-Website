@@ -1,0 +1,442 @@
+---
+title: Company Structure and Objectives T2 2026
+sidebar:
+  label: Company Structure and Objectives T2 2026
+---
+
+## Executive Summary
+
+Thoth Tech is an education-focused technology company headquartered in Melbourne, Australia. Our
+mission is to build, operate, and deploy tools that enhance education outcomes by empowering
+students, connecting them with tutors, and facilitating personalised learning experiences.
+
+We value sustainability, collaboration, and innovation. We strive to deliver exceptional quality in
+all our products, ensuring their sustainability. Thoth Tech achieves this commitment while
+empowering our people with established software development frameworks and a safe, supportive
+learning environment.
+
+This report will outline the company structure, objectives, and projects for trimester 2, 2026.
+Thoth Tech’s major projects are maintaining and improving the core products of OnTrack (a.k.a.
+Doubtfire) and SplashKit.
+
+## Leadership Team
+
+### Company Board
+
+- Farah Farizi - Company Director
+- Andrew Cain - Product Owner (OnTrack & SplashKit)
+
+### Product Mentors
+
+- OnTrack: Nebula Alam & Satika Jayawardena
+- SplashKit: Olivia McKeon, Sean Boettger & Tien Pham
+
+### Student Leadership
+
+### OnTrack
+
+#### Senior Leaders
+
+- Owen Brian Costin
+- David Tenni
+- Gaurav Manohar Myana
+
+#### Junior Leaders
+
+- Maple Fox
+- Paul Eccarius
+- Samridh Limbu
+- Tan Tai Le
+- Thien Phuc Tran
+- Vinh Khang Truong
+- Jayam Jaluk Patel
+- Duong Bao Huy Tran
+
+### SplashKit
+
+#### Senior Leaders
+
+- Aamir Rafeeq
+- Ekam Tehri
+- Janki Luitel
+- Jasveena Jasveena
+- Konstantin Nadtochii
+- Osaid Mohammed A Bahabri
+- Ralph Weng
+- Rory Douglas
+
+## Trimester Goals and Objectives
+
+This trimester, Thoth Tech aims to achieve the following:
+
+### Goal 1: Foster professional growth and a collaborative culture
+
+- **Encourage Lifelong Learning and Skill Development**: A core tenant of our products, OnTrack and
+  SplashKit, is to provide a supportive environment where students and beginners can take ownership
+  of their learning. OnTrack is a tool to keep your learning “on track,” and beginner programmers
+  can “make a splash” with SplashKit. Our hope is that these tools give students confidence and
+  develops their mindset to become lifelong learners.
+- **Develop clear and accessible documentation**: To support students and beginners in their
+  journey, it is imperative that rich documentation and tutorials accompany our tools. This feeds
+  into the lifelong learning goal by teaching students’ habits of self-education and reading
+  documentation.
+- **Promote people-centred initiative and teamwork**: As a team, we seek to empower team members to
+  take ownership of their work while encouraging a collaborative culture built on mutual
+  responsibility and shared success.
+
+### Goal 2: Strengthen and expand our products
+
+- **Migrate features to newer, secure versions**: Parts of the current stack are outdated, this
+  makes maintenance harder, therefore limiting access to upcoming features. Migration leads to a
+  more maintainable and secure platform with long-term advantages.
+- **Address critical bugs and security vulnerabilities**: We will prioritise fixing high-impact bugs
+  and security issues to maintain a high standard of quality, reliability, and safety in our
+  products.
+- **Improve user experience**: Across our products, we aim to improve self-serve capability such as
+  advanced analytics features and task overview features in OnTrack, user game upload to SplashKit
+  Online and improved package management for SplashKit Core. Upon completion of the OnTrack
+  front-end migration, we will improve accessibility with colour themes for those with impaired
+  colour vision.
+- **Enhance system stability and performance**: We will work on optimising key workflows and backend
+  processes across our products to reduce downtime, improve responsiveness and ensure reliable
+  operation for all users, supporting both current workloads and future growth.
+
+### Goal 3: Improve project governance & transparency
+
+As a team, we hope to leave Thoth Tech in a better state than we found it by undertaking the
+following activities during T2 2026:
+
+- **Improve alignment between goals, roadmap, and tasks**: At present, there are enhancements and
+  fixes submitted to our Thoth Tech repositories that our planner board tasks do not represent. We
+  seek to improve the alignment between our long-term roadmap, short-term goals, and immediate-term
+  tasks. Additionally, we plan to seek clarification from the product owner regarding backlogs for
+  both products to provide a clearer vision on what work needs doing to further what we are
+  building.
+- **Clean up pull requests in our repositories**: Previous company members have completed some tasks
+  in our planner boards, with code that the maintainers have reviewed and accepted on GitHub. We aim
+  to accept pull requests for completed works where relevant, and to close out the associated user
+  stories.
+- **Improve opportunities for contribution**: We intend to improve the alignment of our roadmap,
+  goals and tasks. By having clearer, atomic, and testable requirements in our planner boards, we
+  will give junior team members a better sense of direction. This will create better opportunities
+  for student developers to build their technical confidence and capability whilst contributing to
+  our ongoing projects.
+
+## Project 1 - OnTrack
+
+### Overview, Goals, and Objectives
+
+OnTrack (a.k.a. Doubtfire, Formatif) is an open-source, modern, lightweight learning management
+system that multiple universities Australia-wide make use of. While the base product is stable and
+useful, our core work at Thoth Tech intends to uplift the product to newer frameworks, develop new
+features, develop robust product documentation, and patch security vulnerabilities. Improvements
+made to this project have the potential to positively impact students in the institutions that use
+OnTrack, within Deakin and beyond.
+
+### Aims for Trimester
+
+The OnTrack project has been set in T1 2026 into a four-team structure that represents our four
+areas of focus. Each of these teams have high-level focuses for the trimester.
+
+The Front-end Migration team is focussed on completing the migration of existing CoffeeScript
+components in the Doubtfire Web repository to Angular17. This work is important because it will
+modernise the web application. With the web app in the Angular17 framework, new opportunities will
+become available such as colour themes, rapid upgrading to Angular21, and the use of new Angular
+framework features. The front-end team will also need to shift development focus to the 10.0.x
+branch as the authoritative branch from 9.x, which will require coordination to shift migrated
+components from 9 to 10 and potentially 10 to 11.
+
+The Security team is focussed on remediating the vulnerabilities that have been identified in the
+T32025 and T22025 vulnerability reports from HardHat AppAttack. Also, new vulnerabilities have no
+doubt been identified in the first part of 2026 that need to be documented and plans created for
+remediation. The security team will continue to use Open Worldwide Application Security Project
+(OWASP) Top 10 application vulnerabilities as their guiding path.
+
+The features team, at the request of the product owner, are looking into newer experimental features
+for OnTrack this trimester. We are moving on from previous years’ features such as the tutor
+tracking module and the staff grant extension module and looking towards new opportunities. Since
+previous application improvements have been aimed at improving the functionality for faculty at an
+organisation, we are now working towards improving the features available for students.
+
+Finally, Documentation team members are focussed on improving, supplementing, and rapidly
+contributing to the documentation repositories of OnTrack. There is much work to be done in this
+space: information needs to sit in the right place – either the Doubtfire Astro repository or the
+Thoth Tech documentation repository. Many documents need to be shifted from one to the other. Also,
+information stored in the Thoth Tech Microsoft Teams / SharePoint library needs to be placed in the
+appropriate repository. Documentation also needs to be checked for accuracy with the latest version
+of OnTrack and the latest ways of working within Thoth Tech.
+
+### Deliverables
+
+#### _Front-End Migration: AngularJS → Angular 17_
+
+- Merge pull requests related to any previously completed frontend migrations to accurately reflect
+  progress in this aim.
+- Map remaining legacy components and complete migration from Angular JS and Coffee Script to
+  Angular and TypeScript
+- Consider rebasing migrations available in 9.x to 10.0.x
+- Potential rebasing migrations available in 10.0.x to 11.0.x
+- Assess and catalogue UI components using outdated design language and remediate to improve
+  consistency in conjunction with the Accessibility work package.
+- Apply the CSS style guide consistently across all the migrated components to improve UI
+  consistency.
+- Support accessibility improvements across the platform to ensure all components meet accessibility
+  standards.
+- Help with issues detailed in the upstream doubtfire-web repository, for example rebasing
+  course-flow branch to new 11.0.x branch
+
+#### _Security and Vulnerability Remediation_
+
+- Perform a high-level vulnerability assessment of OnTrack, guided by the OWASP Top 10 (e.g.
+  injection issues, broken authentication, access control weaknesses, and security
+  misconfigurations).
+- Patch outstanding vulnerabilities from previous AppAttack API penetration testing and recent
+  findings, prioritising critical and high-risk issues.
+- Improve authentication and session handling to make login and access more reliable and secure
+  across the platform.
+- Begin laying the groundwork for future enhancements such as SSO and mTLS, ensuring that any
+  prototypes follow secure design principles.
+- Review third-party dependencies and GitHub security alerts, updating any vulnerable or outdated
+  packages where necessary.
+- Potentially conduct a manual penetration test for the application, focusing on authentication,
+  authorisation, input validation, while considering the OWASP principles. Remediate and document
+  any vulnerabilities as a result.
+- Comprehensive security review report containing newly identified vulnerabilities, remediation
+  work, and security recommendations for further development, and handover to the next team.
+- Entire application Security Audit (i.e. OWASP review, dependency review, GitHub security review
+  etc.)
+
+#### _Documentation and Project Organisation_
+
+- Fill documentation gaps in docs repositories based on Planner tasks
+- Update website team member's section, upload the T12026 Objectives and Structure
+- Refine/update guides and tutorials
+- Tidy Microsoft Teams / SharePoint documentation repository
+- Close out all remaining pull requests against documentation repositories
+- Add timestamp and author to documentation.
+- Explore concept of assigning docs pages to certain team members to update.
+
+#### _Features_
+
+#### _Cross-project Dashboard Enhancements_
+
+- Implement an overview of all tasks across every project together in one dashboard.
+- Update styling from 10.0.x to newer 11.0.x branch.
+- Allow students to sort their task lists based on due dates or by manual custom sorting.
+
+#### _Peer Progress Indicator_
+
+- Anonymous peer progress visual indicator to show overall class progress for tasks
+- Motivation for students to stay OnTrack by seeing other’s progress
+
+#### _Email and mobile notifications_
+
+- Improve email notifications and create mobile notifications
+  - This will require a mobile app for Android and iOS
+
+### Project Members
+
+| Member Names                       | Roles/Responsibilities | Junior/Senior |
+| ---------------------------------- | ---------------------- | ------------- |
+| Owen Costin                        | Team Leader            | Senior        |
+| David Tenni                        | Team Leader            | Senior        |
+| Gaurav Manohar Myana               | Team Leader            | Senior        |
+| Jayam Jaluk Patel                  | Team Leader            | Senior        |
+| Tan Tai Le                         | Team Leader            | Junior        |
+| Samridh Limbu                      | Team Leader            | Junior        |
+| Duong Bao Huy Tran                 | Team Leader            | Junior        |
+| Vinh Khang Truong                  | Team Leader            | Junior        |
+| Paul Eccarius                      | Team Leader            | Junior        |
+| Thien Phuc Tran                    | Team Leader            | Junior        |
+| Maple Fox                          | Team Leader            | Junior        |
+| Roeen Kareemy                      | Team Member            | Senior        |
+| Renee Sun                          | Team Member            | Senior        |
+| Sanjana Bottu                      | Team Member            | Senior        |
+| Anagh Wadhwa                       | Team Member            | Senior        |
+| Mudith Makawitage                  | Team Member            | Senior        |
+| Ly Leang                           | Team Member            | Senior        |
+| Julian Mirchandani                 | Team Member            | Senior        |
+| Jeffy Sam Babu                     | Team Member            | Senior        |
+| Niethin Rueshil Shreedharan        | Team Member            | Senior        |
+| Gurwinder Singh                    | Team Member            | Senior        |
+| Thirumal Reddy Enugu               | Team Member            | Senior        |
+| Saketh Podipireddy                 | Team Member            | Senior        |
+| Jay Shrimpton                      | Team Member            | Senior        |
+| Joshua Erickson                    | Team Member            | Senior        |
+| Leeon Gourav Rangey                | Team Member            | Senior        |
+| Sujay Aitham                       | Team Member            | Senior        |
+| Bene Esayas                        | Team Member            | Junior        |
+| Davie Chen                         | Team Member            | Junior        |
+| Dylan Cleal                        | Team Member            | Junior        |
+| Samuel Ryan Mason                  | Team Member            | Junior        |
+| Eloise Ridder-Strickland           | Team Member            | Junior        |
+| Swyam Khare                        | Team Member            | Junior        |
+| Sandaru Shalitha Bandara           | Team Member            | Junior        |
+| Zhiyi Yang                         | Team Member            | Junior        |
+| Umeda Kumari Ranuluge              | Team Member            | Junior        |
+| Kimsreng In                        | Team Member            | Junior        |
+| Sandil Sithmaka Bandara Weganthale | Team Member            | Junior        |
+| Reem Alhazmi                       | Team Member            | Junior        |
+| Nephat Komu Muriithi               | Team Member            | Junior        |
+| Ronit Khokhar                      | Team Member            | Junior        |
+| Shaashwat Sharma                   | Team Member            | Junior        |
+| Luvya Mendiratta                   | Team Member            | Junior        |
+
+## Project 2 - SplashKit
+
+### Overview, Goals, and Objectives
+
+SplashKit is an open-source software framework designed for beginners and students, to simplify
+application and game development. The core SplashKit framework was initially developed in C++, but
+support has now been added for C#, Python, Pascal, and JavaScript; beyond the core framework, the
+project also encompasses an online IDE, physical arcade machines, and a website and tutorials.
+
+This trimester 2 2026, we will be running the following projects aligned with the above:
+
+#### **SplashKit Expansion**
+
+The SplashKit Expansion team is responsible for maintaining and enhancing the SplashKit Core
+Library. This will include bug fixes, unit testing, any work involving SplashKit in package
+managers, and feature enhancements.
+
+#### **SplashKit Online**
+
+This team is responsible for the online IDE. Work in this team will include improving C++ and C#
+support, as well reworking the file structure to better support C#. Beyond this, our roadmap for
+this product includes a code checker to check code prior to deployment on SplashKit Online or the
+arcade machine, and – aligned with checking code before deployment – an easier way for students to
+add games to SplashKit Online without having to rebuild the site.
+
+#### **SplashKit Arcade**
+
+In prior trimesters, the SplashKit team have obtained and deployed physical arcade cabinets
+containing Raspberry Pi 5 and 3B+ computers, designed to showcase games developed with SplashKit.
+Test machines were developed in T2 2025, along with demonstration games; the focus now will be on
+maintenance of the arcade game hardware, bug fixes for the machines and the games previously
+created, and implementation of an API to improve controller support.
+
+#### **SplashKit Website & Tutorials**
+
+The SplashKit website aims to offer user-friendly installation instructions and tutorials aimed at
+helping beginners and students explore SplashKit’s functionality. Work for this team will include
+expanding usage examples and tutorials across the supported languages, continuing to improve the
+user interface by leveraging Tailwind CSS, Preline, and existing component libraries, and improving
+the Netlify build process.
+
+### Aims for Trimester
+
+#### **Improve Stability and Reliability**
+
+We will work to address several outstanding bugs in the SplashKit Core library and in games created
+for SplashKit Arcade; depending on resource availability, bug fixing work is required for SplashKit
+Arcade hardware as well. Stability improvements will focus on bug fixes, performance improvements,
+and ensuring that recent changes do not introduce regressions.
+
+#### **SplashKit Online capability of handling several languages**
+
+As of this moment, the only stable version is JS. In C# only a few methods are binded into WASM; the
+C++ version is known to not work as expected.
+
+#### **Develop and Refine Unit Tests for SplashKit Core**
+
+Continuing this goal from T1 2026, we aim to continue building a suite of unit tests for SplashKit.
+This includes improving existing tests, ensuring consistency in testing practices, and increasing
+code coverage to improve reliability and long-term maintainability. Another significant sub-goal
+here is to build automated unit tests in NuGet package, which was largely reached by the former
+team.
+
+#### **Audit code standards in SplashKit Core**
+
+Some parts of the core SDK have not been updated for a long time, and may need to be improved or
+refactored. Audit code formatting against [style guide name] and identify modernization
+opportunities.
+
+#### **Migration of Arcade Machine to Raspberry Pi 5**
+
+We are to continue working on ensuring that Arcade Machine is running on the Raspberry Pi 5. While
+the compatibility does not depend on the difference between boards, it does depend on the versions
+of Linux (i.e. C# games are not supported by newer .NET versions, and the older .NET version is not
+available on the newer Linux/Raspbian version).
+
+#### **Completion of peer (and mentor) reviews for the project**
+
+As of the beginning of the trimester, there are many cards awaiting peer review, especially from
+SplashKit Website. We are planning to achieve progress in clearing the queue up, allowing
+improvements from prior cohorts to be incorporated.
+
+### Deliverables
+
+This trimester we will focus our attention on the following deliverables:
+
+#### SplashKit Expansion
+
+- Meaningful progress developing a comprehensive automated C# testing suite
+  - [Develop a comprehensive automated C# testing suite](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/tt.c_19:eacddf4a1ced46dbaa8e8a6ea0b47a86@thread.tacv2_p_mIelcQoIgkqhbM8WaPS3sMgAEmyV_h_1714822872454?tenantId=d02378ec-1688-46d5-8540-1c28b5f470f6&webUrl=https%3A%2F%2Ftasks.teams.microsoft.com%2Fteamsui%2FpersonalApp%2Falltasklists&context=%7B%22subEntityId%22%3A%22%2Fv1%2Fplan%2FmIelcQoIgkqhbM8WaPS3sMgAEmyV%2Fview%2Fboard%2Ftask%2FwdjLQzU1ZEKkf1uCrY1I5cgAE5De%22%2C%22channelId%22%3A%2219%3Aeacddf4a1ced46dbaa8e8a6ea0b47a86%40thread.tacv2%22%7D)
+- Bug fixes within MSYS2 environment
+  - [Investigate and fix download functions in MSYS2](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/tt.c_19:eacddf4a1ced46dbaa8e8a6ea0b47a86@thread.tacv2_p_mIelcQoIgkqhbM8WaPS3sMgAEmyV_h_1714822872454?tenantId=d02378ec-1688-46d5-8540-1c28b5f470f6&webUrl=https%3A%2F%2Ftasks.teams.microsoft.com%2Fteamsui%2FpersonalApp%2Falltasklists&context=%7B%22subEntityId%22%3A%22%2Fv1%2Fplan%2FmIelcQoIgkqhbM8WaPS3sMgAEmyV%2Fview%2Fboard%2Ftask%2F_9A0GsWdg0-t8VNHPfk9usgAIvQt%22%2C%22channelId%22%3A%2219%3Aeacddf4a1ced46dbaa8e8a6ea0b47a86%40thread.tacv2%22%7D)
+  - [Investigate and fix graphical bugs in MSYS2](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/tt.c_19:eacddf4a1ced46dbaa8e8a6ea0b47a86@thread.tacv2_p_mIelcQoIgkqhbM8WaPS3sMgAEmyV_h_1714822872454?tenantId=d02378ec-1688-46d5-8540-1c28b5f470f6&webUrl=https%3A%2F%2Ftasks.teams.microsoft.com%2Fteamsui%2FpersonalApp%2Falltasklists&context=%7B%22subEntityId%22%3A%22%2Fv1%2Fplan%2FmIelcQoIgkqhbM8WaPS3sMgAEmyV%2Fview%2Fboard%2Ftask%2FkVGpQlWj5EObVlI9G7hMyMgAMUDr%22%2C%22channelId%22%3A%2219%3Aeacddf4a1ced46dbaa8e8a6ea0b47a86%40thread.tacv2%22%7D)
+- Expanded test coverage for key core library components
+  - [Evaluate unit test coverage](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/tt.c_19:eacddf4a1ced46dbaa8e8a6ea0b47a86@thread.tacv2_p_mIelcQoIgkqhbM8WaPS3sMgAEmyV_h_1714822872454?tenantId=d02378ec-1688-46d5-8540-1c28b5f470f6&webUrl=https%3A%2F%2Ftasks.teams.microsoft.com%2Fteamsui%2FpersonalApp%2Falltasklists&context=%7B%22subEntityId%22%3A%22%2Fv1%2Fplan%2FmIelcQoIgkqhbM8WaPS3sMgAEmyV%2Fview%2Fboard%2Ftask%2Frpn5dsi-Rk-0QP4QU9OeicgAGCMU%22%2C%22channelId%22%3A%2219%3Aeacddf4a1ced46dbaa8e8a6ea0b47a86%40thread.tacv2%22%7D)
+- Improved consistency and structure of existing tests
+  - [Add post-run cleanup for integration tests](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/tt.c_19:eacddf4a1ced46dbaa8e8a6ea0b47a86@thread.tacv2_p_mIelcQoIgkqhbM8WaPS3sMgAEmyV_h_1714822872454?tenantId=d02378ec-1688-46d5-8540-1c28b5f470f6&webUrl=https%3A%2F%2Ftasks.teams.microsoft.com%2Fteamsui%2FpersonalApp%2Falltasklists&context=%7B%22subEntityId%22%3A%22%2Fv1%2Fplan%2FmIelcQoIgkqhbM8WaPS3sMgAEmyV%2Fview%2Fboard%2Ftask%2Fz_MvnYL9p0W_xwm39l4hy8gAPyjl%22%2C%22channelId%22%3A%2219%3Aeacddf4a1ced46dbaa8e8a6ea0b47a86%40thread.tacv2%22%7D)
+
+#### SplashKit Online
+
+- Resolving issues with SplashKit Online’s dark theme
+  - [Improve Code Mirror contrast & readability with basic WCAG standards](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/tt.c_19:eacddf4a1ced46dbaa8e8a6ea0b47a86@thread.tacv2_p_mIelcQoIgkqhbM8WaPS3sMgAEmyV_h_1714822872454?tenantId=d02378ec-1688-46d5-8540-1c28b5f470f6&webUrl=https%3A%2F%2Ftasks.teams.microsoft.com%2Fteamsui%2FpersonalApp%2Falltasklists&context=%7B%22subEntityId%22%3A%22%2Fv1%2Fplan%2FmIelcQoIgkqhbM8WaPS3sMgAEmyV%2Fview%2Fboard%2Ftask%2FS2IDgK_Mykeenio-NTCASsgAN0-C%22%2C%22channelId%22%3A%2219%3Aeacddf4a1ced46dbaa8e8a6ea0b47a86%40thread.tacv2%22%7D)
+- Reviewing the security configuration on SplashKit Online
+- Expanding documentation of SplashKit Online, and finalising what has been done in the previous
+  trimester
+- Investigation and resolving the issues regarding running C# and C++ code in SplashKit Online
+  - [Investigate C++ Runtime Execution Failure](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/tt.c_19:eacddf4a1ced46dbaa8e8a6ea0b47a86@thread.tacv2_p_mIelcQoIgkqhbM8WaPS3sMgAEmyV_h_1714822872454?tenantId=d02378ec-1688-46d5-8540-1c28b5f470f6&webUrl=https%3A%2F%2Ftasks.teams.microsoft.com%2Fteamsui%2FpersonalApp%2Falltasklists&context=%7B%22subEntityId%22%3A%22%2Fv1%2Fplan%2FmIelcQoIgkqhbM8WaPS3sMgAEmyV%2Fview%2Fboard%2Ftask%2FiI_-dCOxCEaDW2iTLE-bksgABiVe%22%2C%22channelId%22%3A%2219%3Aeacddf4a1ced46dbaa8e8a6ea0b47a86%40thread.tacv2%22%7D)
+  - [Investigate C# Web Assembly Runtime Deployment Error](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/tt.c_19:eacddf4a1ced46dbaa8e8a6ea0b47a86@thread.tacv2_p_mIelcQoIgkqhbM8WaPS3sMgAEmyV_h_1714822872454?tenantId=d02378ec-1688-46d5-8540-1c28b5f470f6&webUrl=https%3A%2F%2Ftasks.teams.microsoft.com%2Fteamsui%2FpersonalApp%2Falltasklists&context=%7B%22subEntityId%22%3A%22%2Fv1%2Fplan%2FmIelcQoIgkqhbM8WaPS3sMgAEmyV%2Fview%2Fboard%2Ftask%2FI0HVnFuEA06NIvL0I0AaL8gACB80%22%2C%22channelId%22%3A%2219%3Aeacddf4a1ced46dbaa8e8a6ea0b47a86%40thread.tacv2%22%7D)
+
+#### SplashKit Arcade
+
+- Resolved bugs in SplashKit Arcade demonstration games
+  - 10 cards under _Arcade Games_
+- RetroFracture progress and (if possible) release (merge when ready-to-run). Lack of members
+  experienced in the area may cause problems with this.
+  - [RetroFracture - Add new game](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/tt.c_19:eacddf4a1ced46dbaa8e8a6ea0b47a86@thread.tacv2_p_mIelcQoIgkqhbM8WaPS3sMgAEmyV_h_1714822872454?tenantId=d02378ec-1688-46d5-8540-1c28b5f470f6&webUrl=https%3A%2F%2Ftasks.teams.microsoft.com%2Fteamsui%2FpersonalApp%2Falltasklists&context=%7B%22subEntityId%22%3A%22%2Fv1%2Fplan%2FmIelcQoIgkqhbM8WaPS3sMgAEmyV%2Fview%2Fboard%2Ftask%2FXlIzBpOriEqyxSxPGw9ax8gADRgu%22%2C%22channelId%22%3A%2219%3Aeacddf4a1ced46dbaa8e8a6ea0b47a86%40thread.tacv2%22%7D)
+- Implementation of a controller API for Arcade Machine hardware
+  - [Create API/Code/Interface for Arcade machine controls](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/tt.c_19:eacddf4a1ced46dbaa8e8a6ea0b47a86@thread.tacv2_p_mIelcQoIgkqhbM8WaPS3sMgAEmyV_h_1714822872454?tenantId=d02378ec-1688-46d5-8540-1c28b5f470f6&webUrl=https%3A%2F%2Ftasks.teams.microsoft.com%2Fteamsui%2FpersonalApp%2Falltasklists&context=%7B%22subEntityId%22%3A%22%2Fv1%2Fplan%2FmIelcQoIgkqhbM8WaPS3sMgAEmyV%2Fview%2Fboard%2Ftask%2FYc-nS_8ex0KPqTo4LlKA_cgAL3U8%22%2C%22channelId%22%3A%2219%3Aeacddf4a1ced46dbaa8e8a6ea0b47a86%40thread.tacv2%22%7D)
+- Raspberry Pi 5 test (teaching) unit validated for the Arcade Machine upgrade
+  - [Set up test unit using Raspberry Pi 5](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/tt.c_19:eacddf4a1ced46dbaa8e8a6ea0b47a86@thread.tacv2_p_mIelcQoIgkqhbM8WaPS3sMgAEmyV_h_1714822872454?tenantId=d02378ec-1688-46d5-8540-1c28b5f470f6&webUrl=https%3A%2F%2Ftasks.teams.microsoft.com%2Fteamsui%2FpersonalApp%2Falltasklists&context=%7B%22subEntityId%22%3A%22%2Fv1%2Fplan%2FmIelcQoIgkqhbM8WaPS3sMgAEmyV%2Fview%2Fboard%2Ftask%2Fx3YGcTdGoEWuvmx8Kz5VkMgAPGy3%22%2C%22channelId%22%3A%2219%3Aeacddf4a1ced46dbaa8e8a6ea0b47a86%40thread.tacv2%22%7D)
+- Stabilise the existing Arcade Machine system and document installation/setup
+  - [All games - some documentation doesn't follow markdown guidelines](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/tt.c_19:eacddf4a1ced46dbaa8e8a6ea0b47a86@thread.tacv2_p_mIelcQoIgkqhbM8WaPS3sMgAEmyV_h_1714822872454?tenantId=d02378ec-1688-46d5-8540-1c28b5f470f6&webUrl=https%3A%2F%2Ftasks.teams.microsoft.com%2Fteamsui%2FpersonalApp%2Falltasklists&context=%7B%22subEntityId%22%3A%22%2Fv1%2Fplan%2FmIelcQoIgkqhbM8WaPS3sMgAEmyV%2Fview%2Fboard%2Ftask%2FrCG6zey2WEuwyUVNR_MKa8gAA_mI%22%2C%22channelId%22%3A%2219%3Aeacddf4a1ced46dbaa8e8a6ea0b47a86%40thread.tacv2%22%7D)
+  - [All games - standardize coding style (using auto formatter?)](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/tt.c_19:eacddf4a1ced46dbaa8e8a6ea0b47a86@thread.tacv2_p_mIelcQoIgkqhbM8WaPS3sMgAEmyV_h_1714822872454?tenantId=d02378ec-1688-46d5-8540-1c28b5f470f6&webUrl=https%3A%2F%2Ftasks.teams.microsoft.com%2Fteamsui%2FpersonalApp%2Falltasklists&context=%7B%22subEntityId%22%3A%22%2Fv1%2Fplan%2FmIelcQoIgkqhbM8WaPS3sMgAEmyV%2Fview%2Fboard%2Ftask%2FGycUJ7NVdEmUvEP4aC0r_sgAE9Fw%22%2C%22channelId%22%3A%2219%3Aeacddf4a1ced46dbaa8e8a6ea0b47a86%40thread.tacv2%22%7D)
+
+#### SplashKit Website
+
+- Enhanced tutorials and documentation on the SplashKit website
+  - [Update GPIO tutorials to support new Remote GPIO Module](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/tt.c_19:eacddf4a1ced46dbaa8e8a6ea0b47a86@thread.tacv2_p_mIelcQoIgkqhbM8WaPS3sMgAEmyV_h_1714822872454?tenantId=d02378ec-1688-46d5-8540-1c28b5f470f6&webUrl=https%3A%2F%2Ftasks.teams.microsoft.com%2Fteamsui%2FpersonalApp%2Falltasklists&context=%7B%22subEntityId%22%3A%22%2Fv1%2Fplan%2FmIelcQoIgkqhbM8WaPS3sMgAEmyV%2Fview%2Fboard%2Ftask%2FJrZMmlB5i0ii6z7AWgo8OMgAEYC7%22%2C%22channelId%22%3A%2219%3Aeacddf4a1ced46dbaa8e8a6ea0b47a86%40thread.tacv2%22%7D)
+  - [Using PWM to control Led Brightness Tutorial - C# Language Update](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/tt.c_19:eacddf4a1ced46dbaa8e8a6ea0b47a86@thread.tacv2_p_mIelcQoIgkqhbM8WaPS3sMgAEmyV_h_1714822872454?tenantId=d02378ec-1688-46d5-8540-1c28b5f470f6&webUrl=https%3A%2F%2Ftasks.teams.microsoft.com%2Fteamsui%2FpersonalApp%2Falltasklists&context=%7B%22subEntityId%22%3A%22%2Fv1%2Fplan%2FmIelcQoIgkqhbM8WaPS3sMgAEmyV%2Fview%2Fboard%2Ftask%2FgeqdZV_R00S7xuUmcUlwfcgAEgp8%22%2C%22channelId%22%3A%2219%3Aeacddf4a1ced46dbaa8e8a6ea0b47a86%40thread.tacv2%22%7D)
+- Add usage examples for the less explored categories (e.g. GenAI, animation, physics, etc.)
+
+### Project Members
+
+| Member Names              | Roles/Responsibilities | Junior/Senior |
+| ------------------------- | ---------------------- | ------------- |
+| Aamir Rafeeq              | Team Leader            | Senior        |
+| Ekam Tehri                | Team Leader            | Senior        |
+| Janki Luitel              | Team Leader            | Senior        |
+| Jasveena Jasveena         | Team Leader            | Senior        |
+| Konstantin Nadtochii      | Team Leader            | Senior        |
+| Osaid Mohammed A Alanazi  | Team Leader            | Senior        |
+| Ralph Weng                | Team Leader            | Senior        |
+| Rory Douglas              | Team Leader            | Senior        |
+| Abdullah Farhan S Alanazi | Team Member            | Senior        |
+| Arnold Sebastian          | Team Member            | Senior        |
+| Ayush Shrinivas Indapure  | Team Member            | Senior        |
+| Connor Jacob Clancy       | Team Member            | Senior        |
+| Himanshi Gaba             | Team Member            | Senior        |
+| Kris Denman               | Team Member            | Senior        |
+| Nadia Zahan               | Team Member            | Senior        |
+| Rachel Rhea Patrao        | Team Member            | Senior        |
+| Ryan Routledge-Ranginui   | Team Member            | Senior        |
+| Sebin Sha Sameer Sha      | Team Member            | Senior        |
+| Sparshdeep Singh          | Team Member            | Senior        |
+| Stan Jovanovic            | Team Member            | Senior        |
+| In Tae Moon               | Team Member            | Junior        |
+| Michael Nardi             | Team Member            | Junior        |
+| Mitchell James Searles    | Team Member            | Junior        |
