@@ -30,6 +30,7 @@ pipeline {
         SONAR_PROJECT_KEY  = "thothtech-documentation-website"
         BUILD_VERSION      = "1.0.${BUILD_NUMBER}"
         GIT_SHORT_SHA      = "" // set during Build stage
+        PATH               = "/Users/Naren/.nvm/versions/node/v22.20.0/bin:/usr/local/bin:/opt/homebrew/bin:${env.PATH}"
     }
 
     stages {
