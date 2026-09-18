@@ -13,7 +13,7 @@ NETWORK="thothtech-net"
 
 case "$ENV" in
     staging) PORT=8081 ;;
-    production) PORT=8080 ;;
+    production) PORT=8082 ;;
     *) echo "Unknown environment '$ENV' (expected staging|production)" >&2; exit 1 ;;
 esac
 
