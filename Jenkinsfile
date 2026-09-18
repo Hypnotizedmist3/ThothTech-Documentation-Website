@@ -29,7 +29,7 @@ pipeline {
         REGISTRY           = "localhost:5000"
         SONAR_PROJECT_KEY  = "thothtech-documentation-website"
         BUILD_VERSION      = "1.0.${BUILD_NUMBER}"
-        GIT_SHORT_SHA      = "" // set during Build stage
+        GIT_SHORT_SHA      = "" // set during Checkout
         PATH               = "/Users/Naren/.nvm/versions/node/v22.20.0/bin:/usr/local/bin:/opt/homebrew/bin:${env.PATH}"
     }
 
@@ -39,7 +39,9 @@ pipeline {
             steps {
                 checkout scm
                 script {
-                    env.GIT_SHORT_SHA = sh(script: "git rev-parse --short HEAD", returnStdout: true).trim()
+                    def sha = sh(script: "git rev-parse --short HEAD", returnStdout: true).trim()
+                    env.GIT_SHORT_SHA = sha
+                    echo "Resolved GIT_SHORT_SHA='${sha}'"
                 }
                 echo "Building commit ${env.GIT_SHORT_SHA} as version ${env.BUILD_VERSION}"
             }
@@ -51,14 +53,13 @@ pipeline {
                 sh 'npm run build'
                 sh """
                     docker build -f Dockerfile.prod \
-                        -t ${IMAGE_NAME}:${BUILD_VERSION} \
-                        -t ${IMAGE_NAME}:${GIT_SHORT_SHA} \
-                        -t ${IMAGE_NAME}:latest .
+                        -t ${env.IMAGE_NAME}:${env.BUILD_VERSION} \
+                        -t ${env.IMAGE_NAME}:${env.GIT_SHORT_SHA} \
+                        -t ${env.IMAGE_NAME}:latest .
                 """
-                // Push to the local Jenkins-managed registry for tagged artifact storage
                 sh """
-                    docker tag ${IMAGE_NAME}:${BUILD_VERSION} ${REGISTRY}/${IMAGE_NAME}:${BUILD_VERSION}
-                    docker push ${REGISTRY}/${IMAGE_NAME}:${BUILD_VERSION} || echo 'Registry not running yet — see SETUP.md step 3'
+                    docker tag ${env.IMAGE_NAME}:${env.BUILD_VERSION} ${env.REGISTRY}/${env.IMAGE_NAME}:${env.BUILD_VERSION}
+                    docker push ${env.REGISTRY}/${env.IMAGE_NAME}:${env.BUILD_VERSION} || echo 'Registry not running yet — see SETUP.md step 3'
                 """
             }
             post {
@@ -83,16 +84,13 @@ pipeline {
 
         stage('Code Quality') {
             environment {
-                // "SonarScanner" = the name given to the tool in
-                // Manage Jenkins > Tools, installed by the SonarQube
-                // Scanner plugin (see SETUP.md step 6).
                 SCANNER_HOME = tool 'SonarScanner'
             }
             steps {
                 withSonarQubeEnv('LocalSonarQube') {
                     sh """
-                        ${SCANNER_HOME}/bin/sonar-scanner \
-                            -Dsonar.projectVersion=${BUILD_VERSION}
+                        ${env.SCANNER_HOME}/bin/sonar-scanner \
+                            -Dsonar.projectVersion=${env.BUILD_VERSION}
                     """
                 }
             }
@@ -110,7 +108,7 @@ pipeline {
             steps {
                 sh 'chmod +x scripts/*.sh'
                 sh './scripts/install-trivy.sh'
-                sh 'IMAGE_NAME=${IMAGE_NAME} IMAGE_TAG=${BUILD_VERSION} ./scripts/security-scan.sh'
+                sh "IMAGE_NAME=${env.IMAGE_NAME} IMAGE_TAG=${env.BUILD_VERSION} ./scripts/security-scan.sh"
             }
             post {
                 always {
@@ -121,16 +119,16 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh "IMAGE_NAME=${IMAGE_NAME} ./scripts/deploy.sh staging ${BUILD_VERSION}"
+                sh "IMAGE_NAME=${env.IMAGE_NAME} ./scripts/deploy.sh staging ${env.BUILD_VERSION}"
             }
         }
 
         stage('Release') {
             steps {
-                sh "IMAGE_NAME=${IMAGE_NAME} ./scripts/release.sh ${BUILD_VERSION}"
+                sh "IMAGE_NAME=${env.IMAGE_NAME} ./scripts/release.sh ${env.BUILD_VERSION}"
                 sh """
-                    git tag -a v${BUILD_VERSION} -m "Automated release ${BUILD_VERSION} (${GIT_SHORT_SHA})" || true
-                    git push origin v${BUILD_VERSION} || echo 'Configure git push credentials in Jenkins to enable tag push'
+                    git tag -a v${env.BUILD_VERSION} -m "Automated release ${env.BUILD_VERSION} (${env.GIT_SHORT_SHA})" || true
+                    git push origin v${env.BUILD_VERSION} || echo 'Configure git push credentials in Jenkins to enable tag push'
                 """
             }
         }
