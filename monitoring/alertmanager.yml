@@ -1,0 +1,13 @@
+route:
+  receiver: "default"
+  group_by: ["alertname", "instance"]
+  group_wait: 10s
+  group_interval: 1m
+  repeat_interval: 3h
+
+receivers:
+  - name: "default"
+    # No external integration configured — alerts are visible in the
+    # Alertmanager UI (http://localhost:9093) which is enough to demo firing
+    # rules. To actually get notified, add a webhook_configs or email_configs
+    # block here (e.g. a Slack incoming webhook) and reference the URL.

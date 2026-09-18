@@ -11,7 +11,10 @@
     "format": "prettier --write \"**/*.md\" && prettier --write \"**/*.mdx\"",
     "format:check": "prettier --check \"**/*.md\" && prettier --check \"**/*.mdx\"",
     "prose:check": "vale src/content/docs --minAlertLevel error",
-    "lint": "npm run format:check && npm run prose:check"
+    "lint": "npm run format:check && npm run prose:check",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ci": "vitest run --coverage"
   },
   "dependencies": {
     "@astrojs/netlify": "^7.0.4",
@@ -26,6 +29,8 @@
   },
   "devDependencies": {
     "markdownlint": "^0.31.1",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "vitest": "^2.1.8",
+    "@vitest/coverage-v8": "^2.1.8"
   }
 }

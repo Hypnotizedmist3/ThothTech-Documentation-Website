@@ -1,0 +1,56 @@
+# Monitoring & Alerting stack. Start once: docker compose -f docker-compose.monitoring.yml up -d
+# Prometheus:   http://localhost:9090
+# Alertmanager: http://localhost:9093
+# Grafana:      http://localhost:3000  (anonymous viewer access enabled)
+#
+# Uses the shared "thothtech-net" Docker network so the blackbox exporter can
+# reach the staging/production containers created by scripts/deploy.sh.
+
+networks:
+  default:
+    name: thothtech-net
+    external: true
+
+services:
+  blackbox-exporter:
+    image: prom/blackbox-exporter:latest
+    container_name: thothtech-blackbox
+    ports:
+      - "9115:9115"
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: thothtech-prometheus
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./monitoring/alert.rules.yml:/etc/prometheus/alert.rules.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+    depends_on:
+      - blackbox-exporter
+
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: thothtech-alertmanager
+    volumes:
+      - ./monitoring/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+    ports:
+      - "9093:9093"
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: thothtech-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Viewer
+    volumes:
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+    depends_on:
+      - prometheus
+
+volumes:
+  prometheus_data:

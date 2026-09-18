@@ -1,0 +1,20 @@
+groups:
+  - name: thothtech-availability
+    rules:
+      - alert: SiteDown
+        expr: probe_success == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "{{ $labels.instance }} is not responding"
+          description: "Health check for {{ $labels.instance }} has failed for more than 30 seconds."
+
+      - alert: SlowResponse
+        expr: probe_duration_seconds > 1.5
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "{{ $labels.instance }} is responding slowly"
+          description: "Probe duration for {{ $labels.instance }} has exceeded 1.5s for 1 minute."

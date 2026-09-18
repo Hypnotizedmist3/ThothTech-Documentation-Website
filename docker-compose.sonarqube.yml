@@ -1,0 +1,25 @@
+# One-off local SonarQube Community instance for the Code Quality stage.
+# Start once, leave running: docker compose -f docker-compose.sonarqube.yml up -d
+# UI: http://localhost:9000  (default login admin/admin, you'll be asked to change it)
+#
+# macOS note: if the container exits with a "max virtual memory areas" error,
+# run scripts/fix-vm-max-map-count.sh once (Elasticsearch, which SonarQube
+# embeds, needs vm.max_map_count >= 262144 inside Docker Desktop's VM).
+
+services:
+  sonarqube:
+    image: sonarqube:community
+    container_name: thothtech-sonarqube
+    ports:
+      - "9000:9000"
+    environment:
+      - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_logs:/opt/sonarqube/logs
+
+volumes:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:

@@ -1,0 +1,14 @@
+# Local Docker registry — gives the Build stage real "artifact storage" and
+# version control for tagged images (Top HD Build Stage criterion), without
+# needing a Docker Hub account. Start once: docker compose -f docker-compose.registry.yml up -d
+services:
+  registry:
+    image: registry:2
+    container_name: thothtech-registry
+    ports:
+      - "5000:5000"
+    volumes:
+      - registry_data:/var/lib/registry
+
+volumes:
+  registry_data:
